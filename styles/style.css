@@ -1,0 +1,58 @@
+*{
+  font-family: Sans-serif;
+  box-sizing: border-box;
+}
+body{
+  font-family: Sams-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #000000;
+}
+.Outer-circle{
+  position: relative;
+  height: 650px;
+  width: 650px;
+  background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+  border-radius: 50%;
+  animation: rotate 6s linear infinite;
+}
+.Outer-circle span{
+  position: absolute;
+  height: 650px;
+  width: 650px;
+  background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+  border-radius: 50%;
+}
+span:nth-child(1){
+  filter: blur(5px);
+}
+span:nth-child(2){
+  filter: blur(10px);
+}
+span:nth-child(3){
+  filter: blur(25px);
+}
+span:nth-child(4){
+  filter: blur(150px);
+}
+.Inner-circle{
+  height: 580px;
+  width: 580px;
+  position: absolute;
+  background: black;
+  border-radius: 50%;
+  z-index: 9;
+  top: 35px;
+  left: 35px;
+}
+@keyframes rotate{
+  0%{
+    filter: hue-rotate(0deg);
+  }
+  100%{
+    filter: hue-rotate(360deg);
+  }
+}
